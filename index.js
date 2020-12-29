@@ -21,7 +21,7 @@ async function processUrls(browser, urls) {
 
 async function processUrl(browser, url) {
   const page = await browser.newPage();
-  await page.setViewport({ width: 1080, height: 1920 });
+  await page.setViewport({ width: 360, height: 640, deviceScaleFactor: 3 });
   await page.goto(url);
 
   // IMPLEMENT: find the shareable element, or bring up the intended slide by injecting some JS, then screenshot it
